@@ -116,7 +116,7 @@ input::placeholder {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-image: url(/assets/images/unchecked.png);
+  background-image: url(assets/images/unchecked.png);
   background-size: 10px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -153,7 +153,7 @@ input::placeholder {
 .tasks li .important {
   position: absolute;
   content: "";
-  background-image: url(/assets/images/important.png);
+  background-image: url(assets/images/important.png);
 
   /* image source - 
   
@@ -196,7 +196,7 @@ input::placeholder {
 }
 
 .tasks li.checked::before {
-  background-image: url(/assets/images/checked.png);
+  background-image: url(assets/images/checked.png);
 }
 
 @media (max-width: 768px) {
