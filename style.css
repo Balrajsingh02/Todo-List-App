@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #294b29;
+}
+
+.container {
+  width: 60%;
+  min-height: 30vh;
+  background-color: #dbe7c9;
+  margin: 20px auto;
+  border-radius: 10px;
+  color: #789461;
+}
+
+.container .todo-app .title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 10px;
+}
+
+.title .logo {
+  font-size: 35px;
+  padding-top: 2px;
+}
+
+.input-btn {
+  padding: 10px 10px;
+  display: flex;
+}
+
+.input-btn input {
+  flex: 1;
+  height: 8vh;
+  background-color: #789461;
+  border: none;
+  outline: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 0px 10px;
+  color: #dbe7c9;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #c7cebd;
+  font-family: "Poppins", sans-serif;
+}
+
+.input-btn button {
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #789461;
+  border-left: 2px solid #dbe7c9;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 16px;
+}
+
+.input-btn button:hover {
+  background-color: #294b29;
+  color: white;
+  cursor: pointer;
+}
+
+.tasks-div {
+  padding: 0px 20px;
+  padding-right: 20px;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  padding-left: 19px;
+  position: relative;
+  justify-content: center;
+}
+
+.tasks li {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tasks li:nth-child(even) {
+  background-color: rgba(191, 191, 191, 0.287);
+  border-radius: 10px;
+}
+
+.tasks li::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url(/assets/images/unchecked.png);
+  background-size: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: -28px;
+  top: 14px;
+  border-radius: 50%;
+}
+
+.tasks li span i {
+  position: absolute;
+  color: red;
+  right: 6px;
+  bottom: 14px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.tasks li p.edit {
+  position: absolute;
+  right: 47px;
+  bottom: -9px;
+  font-size: 24px;
+  display: inline;
+}
+
+.tasks li .time {
+  position: absolute;
+  color: #294b29;
+  right: 80px;
+  font-size: 16px;
+  cursor: default;
+}
+
+.tasks li .important {
+  position: absolute;
+  content: "";
+  background-image: url(/assets/images/important.png);
+
+  /* image source - 
+  
+  credit - 
+  
+  <a href="https://www.flaticon.com/free-icons/important" title="important icons">Important icons created by Freepik - Flaticon</a>
+  
+  */
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 180px;
+  font-size: 20px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tasks li.important-toggle {
+  background-color: rgba(239, 239, 18, 0.563);
+  border-radius: 10px;
+  padding-right: 20px;
+}
+
+.tasks li .important:hover::after {
+  content: "High Priority ?";
+  font-size: 14px;
+  position: absolute;
+  bottom: 20px;
+  right: 2px;
+  width: 100px;
+  background-color: rgba(239, 239, 18, 0.563);
+  border: 2px solid rgb(212, 208, 208);
+}
+
+.checked {
+  text-decoration: line-through;
+  text-decoration-color: rgb(8, 7, 7);
+}
+
+.tasks li.checked::before {
+  background-image: url(/assets/images/checked.png);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .tasks li {
+    padding-left: 0px;
+  }
+
+  .tasks li span i {
+    bottom: 10px;
+  }
+
+  .tasks li p.edit {
+    display: inline;
+    bottom: -13px;
+  }
+
+  .tasks li .time {
+    display: none;
+  }
+
+  .tasks li .important {
+    right: 90px;
+    bottom: 10px;
+  }
+
+  .input-btn button {
+    font-size: 12px;
+  }
+  .tasks li {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+}

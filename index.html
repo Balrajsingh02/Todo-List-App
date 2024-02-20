@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fevicon start -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/assets/fevicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/assets/fevicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/assets/fevicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/assets/fevicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/assets/fevicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/assets/fevicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/assets/fevicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/assets/fevicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/fevicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/fevicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/fevicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/fevicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/fevicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- fevicon end -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Todo List app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
+        <div class="title">
+          <h1>To-Do List</h1>
+          <span>
+            <i
+              class="fa-regular fa-rectangle-list logo"
+              style="color: #789461"
+            ></i
+          ></span>
+        </div>
+        <!-- input section -->
+        <div class="input-btn">
+          <input
+            type="text"
+            id="input-task"
+            name="task"
+            placeholder="add task"
+          />
+          <button type="submit" id="btn">Add Task</button>
+        </div>
+        <div class="tasks-div">
+          <ul class="tasks">
+            <li class="completed">
+              task 1
+              <span class="important"></span>
+              <p class="edit">Edit</p>
+              <i>Delete</i>
+              <span class="time">time</span>
+            </li>
+
+            <li>task 2</li>
+            <li>task 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
